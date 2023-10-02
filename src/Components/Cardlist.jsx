@@ -4,7 +4,6 @@ import Card from "./Card";
 import carData from "./Data/data";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
 import {
   setCars,
   selectCars,
@@ -32,7 +31,7 @@ const CardList = () => {
   }, [dispatch]);
   return (
     <>
-      <div className="container my-4">
+      <div className="container my-4 ">
         <div className="row">
           {cars.slice((currentPage - 1) * 6, currentPage * 6).map((car) => (
             <div className="col-md-4 g-4 ">
@@ -43,14 +42,14 @@ const CardList = () => {
         <div className="container d-flex justify-content-between ">
           <button
             type="button"
-            class="btn btn-outline-dark"
+            class="btn btn-dark"
             disabled={currentPage === 1}
             onClick={() => handlePageChange(currentPage - 1)}>
             Previous
           </button>
           <button
             type="button"
-            class="btn btn-outline-dark"
+            class="btn btn-dark"
             disabled={currentPage === totalPages}
             onClick={() => handlePageChange(currentPage + 1)}>
             Next

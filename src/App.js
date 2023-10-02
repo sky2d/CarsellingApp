@@ -6,7 +6,8 @@ import { Provider } from "react-redux";
 function App() {
   return (
 
-    <>
+    
+      <div >
       <Provider store={store}>
         <NavBar />
         <Routes>
@@ -14,7 +15,8 @@ function App() {
           <Route path="/" element={<Cardlist />} />
         </Routes>
       </Provider>
-    </>
+      </div>
+   
 
   );
 }
