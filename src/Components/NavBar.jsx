@@ -40,7 +40,7 @@ function NavBar() {
                 onChange={handleSearchChange}
               />
               <button className="btn btn-outline-light" type="submit">
-                Search
+                Search for cars...
               </button>
             </form>
           </div>
