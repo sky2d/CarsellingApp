@@ -4,6 +4,7 @@ import Card from "./Card";
 import carData from "./Data/data";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { Pagination } from "@mui/material";
 import {
   setCars,
   selectCars,
@@ -40,20 +41,11 @@ const CardList = () => {
           ))}
         </div>
         <div className="container d-flex justify-content-between ">
-          <button
-            type="button"
-            class="btn btn-dark"
-            disabled={currentPage === 1}
-            onClick={() => handlePageChange(currentPage - 1)}>
-            Previous
-          </button>
-          <button
-            type="button"
-            class="btn btn-dark"
-            disabled={currentPage === totalPages}
-            onClick={() => handlePageChange(currentPage + 1)}>
-            Next
-          </button>
+          <Pagination
+            count={totalPages} 
+            page={currentPage} 
+            onChange={(event, page) => handlePageChange(page)}
+          />
         </div>
       </div>
     </>

@@ -10,7 +10,7 @@ const Card = (props) => {
         <img src={imgUrl} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title fw-bold">{brand}</h5>
-          <p className="card-text fw-bold">Year</p>
+          <p className="card-text fw-bold">2023</p>
           <p className="card-text my-2 fw-bold">{price}$</p>
           <a href="#" className="btn btn-dark my-2">
             Rent
